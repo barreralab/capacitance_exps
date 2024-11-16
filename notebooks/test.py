@@ -1,1 +1,4 @@
-import qcodes.instrument_drivers.Keithley.Keithley_2400
+from cappy.config import qc_dbpath
+
+
+print(qc_dbpath)
