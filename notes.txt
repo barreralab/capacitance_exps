@@ -1,0 +1,6 @@
+Use virtualenv to create virtual environment for python. Don't want to install qcodes for each environment though. Solution: 
+    virtualenv --system-site-packages venv
+
+Creates virtual environment named venv. On package import, if not found in venv, will backtrack to global system. 
+
+Can share the global qcodes install across environments. 
