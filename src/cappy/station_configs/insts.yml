@@ -4,21 +4,25 @@ instruments:
     type: barreralabdrivers.drivers.ACDAC9106
     address: ASRL6::INSTR
 
+  acdacsim:
+    type: barreralabdrivers.sims.ACDAC9106.yaml
+    address: GPIB::1::INSTR
+
   dcdac:
     type: barreralabdrivers.drivers.DCDAC5764
     address: ASRL5::INSTR
 
   lockin:
     type: qcodes.instrument_drivers.stanford_research.SR865A
-    address: TCPIP0::169.254.169.2::inst0::INSTR
+    address: TCPIP0::169.254.169.5::inst0::INSTR
 
     parameters:
       input_range:
         initial_value: 0.3
 
   keithley:
-    type: qcodes.instrument_drivers.Keithley.Keithley_2400
-    address: ASRL2::INSTR
+    type: barreralabdrivers.drivers.Keithley6500
+    address: TCPIP0::169.254.169.3::inst0::INSTR
 
   yoko:
     type: barreralabdrivers.drivers.YokogawaGS820

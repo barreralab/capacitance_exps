@@ -7,6 +7,8 @@ from typing import Tuple
 import numpy as np
 import time
 
+from barreralabdrivers.drivers import Keithley6500
+
 
 class Balancer:
     def __init__(
