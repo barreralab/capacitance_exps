@@ -13,9 +13,9 @@ from barreralabdrivers.drivers import Keithley6500
 class Balancer:
     def __init__(
         self,
-        control: BaseVoltageSource,
-        reference: BaseVoltageSource,
-        drive: BaseVoltageSource,
+        control: BaseVoltageSource,  # voltage to the known capacitor
+        reference: BaseVoltageSource,  # reference to the lockin
+        drive: BaseVoltageSource,  # voltage to the unknown capacitor
         Lockin: SR86x,
         frequency: Parameter,
         integration_time: float = 2,
