@@ -14,16 +14,16 @@ instruments:
 
   lockin:
     type: qcodes.instrument_drivers.stanford_research.SR865A
-    address: TCPIP0::169.254.169.5::inst0::INSTR
+    address: TCPIP::169.254.169.5::inst0::INSTR
 
     parameters:
       input_range:
-        initial_value: 0.3
+        initial_value: 1
 
   keithley:
     type: barreralabdrivers.drivers.Keithley6500
-    address: TCPIP0::169.254.169.3::inst0::INSTR
+    address: TCPIP::169.254.169.3::inst0::INSTR
 
   yoko:
     type: barreralabdrivers.drivers.YokogawaGS820
-    address: TCPIP0::169.254.169.1::inst0::INSTR
+    address: TCPIP::169.254.169.1::inst0::INSTR

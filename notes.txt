@@ -1,9 +1,14 @@
 Use virtualenv to create virtual environment for python. Don't want to install qcodes for each environment though. Solution: 
-    virtualenv --system-site-packages venv
+    py-m venv venv --system-site-packages
 
 Creates virtual environment named venv. If pkg not found in venv will backtrack to global system. 
 Can share the global qcodes install across environments. 
 
+List python packages with 
+pip list --local
 
 In vscode also have to configure python interpreter to be the one defined in the venv
 Should now be able to access package anywhere. 
+
+
+**Multi-plotting works better with dond module than measurement contexts
