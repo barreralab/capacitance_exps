@@ -11,4 +11,4 @@ In vscode also have to configure python interpreter to be the one defined in the
 Should now be able to access package anywhere. 
 
 
-**Multi-plotting works better with dond module than measurement contexts
+**Multi-plotting works better with dond module than measurement contexts. ***Works even better with measureme. 
