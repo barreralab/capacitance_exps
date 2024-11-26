@@ -16,12 +16,16 @@ instruments:
     type: barreralabdrivers.drivers.Keithley6500
     address: TCPIP::169.254.169.3::inst0::INSTR
 
-  lockin:
+  lockin1:
     type: qcodes.instrument_drivers.stanford_research.SR865A
     address: TCPIP::169.254.169.5::inst0::INSTR
 
-  ppms:
-    type: qcodes.instrument_drivers.QuantumDesign.DynaCool
-    # MAKE SURE TO UPDATE ETHERNET ADAPTER IP ADDRESS ON PPMS PC
-    # IF ISSUES, USE INTERNET.
-    # address: TCPIP::169.254.xxx.xxx::5000::SOCKET
+  lockin2:
+    type: qcodes.instrument_drivers.stanford_research.SR860
+    address: TCPIP::169.254.169.20::inst0::INSTR
+
+  # ppms:
+  #   type: qcodes.instrument_drivers.QuantumDesign.DynaCool
+  # MAKE SURE TO UPDATE ETHERNET ADAPTER IP ADDRESS ON PPMS PC
+  # IF ISSUES, USE INTERNET.
+  # address: TCPIP::169.254.xxx.xxx::5000::SOCKET
