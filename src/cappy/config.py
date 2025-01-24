@@ -3,7 +3,10 @@
 """
 
 from pathlib import Path
+import os
 
+
+# TODO use os library to make this device agnostic
 root = Path(
     "C:/Users/barreralab/OneDrive - University of Toronto/Documents/capacitance_exps"
 )
@@ -18,7 +21,10 @@ testconfig = (
     root / "src" / "cappy" / "station_configs" / "insts.yml"
 )  # insts.yml is the config file which has all our addresses
 
+
+# Qcodes station yaml config paths
 coolconfig = root / "src" / "cappy" / "station_configs" / "ppms_exps.yml"
+dualhemtconfig = root / "src" / "cappy" / "station_configs" / "dual_hemt.yml"
 
 
 def save_measurement_id(idx: int, description: str):

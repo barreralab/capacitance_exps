@@ -12,3 +12,6 @@ Should now be able to access package anywhere.
 
 
 **Multi-plotting works better with dond module than measurement contexts. ***Works even better with measureme. 
+
+
+Issue: Changes to cappy package are not immediately reflected in virtualenv. Why? Have to restart kernel to enforce changes
