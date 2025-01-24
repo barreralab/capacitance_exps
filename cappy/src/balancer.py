@@ -1,5 +1,5 @@
 from qcodes.instrument_drivers.stanford_research import SR86x
-from .virtual_params import BaseVoltageSource
+from virtual_params import BaseVoltageSource
 
 # from qcodes.instrument import Instrument, InstrumentBase
 from qcodes.parameters import Parameter
@@ -7,15 +7,13 @@ from typing import Tuple
 import numpy as np
 import time
 
-from barreralabdrivers.drivers import Keithley6500
-
 
 class Balancer:
     def __init__(
         self,
-        control: BaseVoltageSource,  # voltage to the known capacitor
-        reference: BaseVoltageSource,  # reference to the lockin
-        drive: BaseVoltageSource,  # voltage to the unknown capacitor
+        control: BaseVoltageSource,
+        reference: BaseVoltageSource,
+        drive: BaseVoltageSource,
         Lockin: SR86x,
         frequency: Parameter,
         integration_time: float = 2,
@@ -106,12 +104,6 @@ class Balancer:
             return self.V0x, self.V0y
         else:
             raise ValueError("Balancer not yet balanced. Call balance() first.")
-
-    def calculate_conductance(self, C_stand) -> float:
-        if self._balanced:
-            return (
-                2 * np.pi * self.frequerncy() * self.V0y * C_stand / self.drive_voltage
-            )
 
     def calculate_capacitance(self, C_stand) -> float:
         if self._balanced:

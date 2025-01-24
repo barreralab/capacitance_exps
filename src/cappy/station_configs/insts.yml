@@ -10,7 +10,7 @@ instruments:
 
   dcdac:
     type: barreralabdrivers.drivers.DCDAC5764
-    address: ASRL5::INSTR
+    address: ASRL4::INSTR
 
   lockin:
     type: qcodes.instrument_drivers.stanford_research.SR865A
