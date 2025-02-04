@@ -14,6 +14,7 @@ root = Path(
 measurement_ids = {}
 
 datapath = root / "data"
+data2path = root / "data2"
 qc_dbpath = datapath / "qc.db"
 mm_dpath = datapath / "mm"
 
