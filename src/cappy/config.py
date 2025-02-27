@@ -15,6 +15,7 @@ measurement_ids = {}
 
 datapath = root / "data"
 data2path = root / "data2"
+data4path = root / "data4term"
 qc_dbpath = datapath / "qc.db"
 mm_dpath = datapath / "mm"
 
@@ -26,6 +27,8 @@ testconfig = (
 # Qcodes station yaml config paths
 coolconfig = root / "src" / "cappy" / "station_configs" / "ppms_exps.yml"
 dualhemtconfig = root / "src" / "cappy" / "station_configs" / "dual_hemt.yml"
+
+term4config = root / "src" / "cappy" / "station_configs" / "4term.yml"
 
 
 def save_measurement_id(idx: int, description: str):

@@ -157,6 +157,7 @@ cython_debug/
 # Data 
 data/
 data2/
+data4term/
 
 # bash scripts 
 *.sh
