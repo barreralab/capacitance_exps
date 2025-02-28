@@ -155,9 +155,7 @@ dmypy.json
 cython_debug/
 
 # Data 
-data/
-data2/
-data4term/
+Data/
 
 # bash scripts 
 *.sh

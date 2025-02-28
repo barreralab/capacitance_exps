@@ -5,17 +5,14 @@
 from pathlib import Path
 import os
 
-
-# TODO use os library to make this device agnostic
-root = Path(
-    "C:/Users/barreralab/OneDrive - University of Toronto/Documents/capacitance_exps"
-)
+root = Path(os.getcwd()).parent.parent
 
 measurement_ids = {}
 
-datapath = root / "data"
-data2path = root / "data2"
-data4path = root / "data4term"
+datamainpath = root / "Data"
+datapath = datamainpath / "data"
+data2path = datamainpath / "data2"
+data4path = datamainpath / "data4term"
 qc_dbpath = datapath / "qc.db"
 mm_dpath = datapath / "mm"
 

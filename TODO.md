@@ -1,0 +1,2 @@
+- more flexible approach to instrument loading for variable setups 
+- Use yamls for fixed setups
