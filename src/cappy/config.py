@@ -5,7 +5,9 @@
 from pathlib import Path
 import os
 
-root = Path(os.getcwd()).parent.parent
+root = Path(
+    r"C:/Users/barreralab/OneDrive - University of Toronto/Documents/capacitance_exps"
+)
 
 measurement_ids = {}
 
