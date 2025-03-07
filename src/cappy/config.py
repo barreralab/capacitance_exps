@@ -34,3 +34,6 @@ def ETH_ADDR(ip_address: str):
 
 def GPIB_ADDR(gpib_address: int):
     return f"GPIB0::{gpib_address}::INSTR"
+
+
+HELLO = "hiya can you see me"

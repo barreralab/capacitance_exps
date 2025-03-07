@@ -34,3 +34,7 @@ class DensityParameter:
 
     def set_density(self, setpoint: float):
         raise NotImplementedError
+
+
+def monkey_time():
+    return 5
