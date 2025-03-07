@@ -1,35 +1,36 @@
 """
-    configuration file 
+configuration file
 """
 
 from pathlib import Path
-import os
 
-root = Path(
-    r"C:/Users/barreralab/OneDrive - University of Toronto/Documents/capacitance_exps"
-)
+ROOT = Path(__file__).resolve().parents[2]
 
-measurement_ids = {}
+# Data Paths
+DATA_MAIN_PATH = ROOT / "Data"
+DATA_PATH = DATA_MAIN_PATH / "data"
+DATA2_PATH = DATA_MAIN_PATH / "data2"
+DATA_FOUR_TERM_PATH = DATA_MAIN_PATH / "data4term"
 
-datamainpath = root / "Data"
-datapath = datamainpath / "data"
-data2path = datamainpath / "data2"
-data4path = datamainpath / "data4term"
-qc_dbpath = datapath / "qc.db"
-mm_dpath = datapath / "mm"
-
-testconfig = (
-    root / "src" / "cappy" / "station_configs" / "insts.yml"
-)  # insts.yml is the config file which has all our addresses
+# YAML files for qcodes station configurations
+TEST_STATION_CONFIG = ROOT / "src" / "cappy" / "station_configs" / "insts.yml"
+COOL_STATION_CONFIG = ROOT / "src" / "cappy" / "station_configs" / "ppms_exps.yml"
+DUAL_HEMT_STATION_CONFIG = ROOT / "src" / "cappy" / "station_configs" / "dual_hemt.yml"
+FOURTERM_STATION_CONFIG = ROOT / "src" / "cappy" / "station_configs" / "4term.yml"
 
 
-# Qcodes station yaml config paths
-coolconfig = root / "src" / "cappy" / "station_configs" / "ppms_exps.yml"
-dualhemtconfig = root / "src" / "cappy" / "station_configs" / "dual_hemt.yml"
-
-term4config = root / "src" / "cappy" / "station_configs" / "4term.yml"
+# SCPI Address Generation for flexible instrument setups
+# Note: this is not encapsulated in a library because addresses can be machine and system specific.
+# This repo template assumes data collection is done on the same machine. Data analysis is agnostic.
 
 
-def save_measurement_id(idx: int, description: str):
-    if idx in measurement_ids:
-        raise IndexError(f"ID {idx} already stored")
+def USB_ADDR(port_number: int):
+    return f"ASRL{port_number}::INSTR"
+
+
+def ETH_ADDR(ip_address: str):
+    return f"TCPIP::{ip_address}::inst0::INSTR"
+
+
+def GPIB_ADDR(gpib_address: int):
+    return f"GPIB0::{gpib_address}::INSTR"

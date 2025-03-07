@@ -1,11 +1,11 @@
-from cappy.config import datapath
+from cappy.config import DATA_PATH
 from sweep.sweep_load import pload1d
 from time import strftime, localtime
 import numpy as np
 from cappy.opener import Opener
 
 # Path to your TSV.gz file
-file_path = datapath
+file_path = DATA_PATH
 
 for idx in (37, 38):
     opened = Opener(file_path, idx)
