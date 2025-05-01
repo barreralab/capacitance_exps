@@ -12,6 +12,10 @@ instruments:
     type: barreralabdrivers.drivers.YokogawaGS820
     address: TCPIP::169.254.169.1::inst0::INSTR
 
+  keithley2400:
+    type: qcodes.instrument_drivers.Keithley.Keithley2400
+    address: GPIB0::15::INSTR
+
   keithley:
     type: barreralabdrivers.drivers.Keithley6500
     address: TCPIP::169.254.169.3::inst0::INSTR
