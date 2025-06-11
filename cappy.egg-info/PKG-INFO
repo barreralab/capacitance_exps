@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: cappy
+Version: 0.0.1
+Summary: Cappy is a simple package for running capacitance experiments.
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Cappy
+
+Common functions and scripts for capacitance experiments
