@@ -16,8 +16,12 @@ instruments:
     type: barreralabdrivers.drivers.Keithley6500
     address: TCPIP::169.254.169.3::inst0::INSTR
 
-  lockin:
+  SR865A:
     type: qcodes.instrument_drivers.stanford_research.SR865A
+    address: TCPIP::169.254.169.5::inst0::INSTR
+
+  SR860:
+    type: qcodes.instrument_drivers.stanford_research.SR860
     address: TCPIP::169.254.169.5::inst0::INSTR
 
   # ppms:

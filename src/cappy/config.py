@@ -11,6 +11,9 @@ DATA_MAIN_PATH = ROOT / "Data"
 DATA_PATH = DATA_MAIN_PATH / "data"
 DATA2_PATH = DATA_MAIN_PATH / "data2"
 BGBSO1_1 = DATA_MAIN_PATH / "BGBSO1_1"
+BGBSO1_2 = DATA_MAIN_PATH / "BGBSO1_2"
+thermocoaxLeakage = DATA_MAIN_PATH / "thermocoaxLeakage"
+deltaC = DATA_MAIN_PATH / "deltaC"
 DATA_FOUR_TERM_PATH = DATA_MAIN_PATH / "data4term"
 
 # YAML files for qcodes station configurations
