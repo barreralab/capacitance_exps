@@ -55,6 +55,7 @@ class Sum:
 
         else:
             self.summ = val
+            self.diff = self.p1() - self.p2()
             p1val = (self.summ + self.diff) / 2
             p2val = (self.summ - self.diff) / 2
             self.p1(p1val)
@@ -62,11 +63,11 @@ class Sum:
 
 
 class Diff:
-    def __init__(self, name, summ: Sum, param1, param2):
+    def __init__(self, name, param1, param2):
         self.full_name = name
         self.p1 = param1
         self.p2 = param2
-        self.summ = summ
+        self.summ = 0
         self.diff = 0
 
     def __call__(self, val=None):
@@ -74,7 +75,7 @@ class Diff:
             return self.p1() - self.p2()
         else:
             self.diff = val
-            sumval = self.summ.summ
+            sumval = self.p1() + self.p2()
             p1val = (sumval + self.diff) / 2
             p2val = (sumval - self.diff) / 2
             self.p1(p1val)
